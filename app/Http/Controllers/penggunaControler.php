@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\pengguna;
+use App\Models\penggunas;
 use Illuminate\Http\Request;
 
 class penggunaControler extends Controller
 {
     public function getAllUser()
     {
-        $users = pengguna::orderBy('username', 'asc')->get();
+        $users = penggunas::orderBy('username', 'asc')->get();
         return response()->json([
             'message' => 'user information',
             'data' => $users
@@ -18,7 +18,7 @@ class penggunaControler extends Controller
 
     public function getUsersId($id)
     {
-        $users = pengguna::find($id);
+        $users = penggunas::find($id);
         if (!$users) {
             return response()->json([
                 'message' => 'users tidak ditemukan'
@@ -33,7 +33,7 @@ class penggunaControler extends Controller
 
     public function getUsersName($username)
     {
-        $users = pengguna::where('username', $username)->get();
+        $users = penggunas::where('username', $username)->get();
         if (!$users) {
             return response()->json([
                 'message' => 'users tidak ditemukan',
@@ -58,7 +58,7 @@ class penggunaControler extends Controller
             'password' => 'required'
         ]);
 
-        $users = pengguna::create($request->all());
+        $users = penggunas::create($request->all());
 
         return response()->json([
             'massage' => 'users berhasil ditambahkan',
@@ -67,7 +67,7 @@ class penggunaControler extends Controller
     }
     public function delete($id)
     {
-        $users = pengguna::findOrFail($id);
+        $users = penggunas::findOrFail($id);
         $users->delete();
 
         return response()->json([

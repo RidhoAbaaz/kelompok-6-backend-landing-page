@@ -1,0 +1,59 @@
+.font-poppins {
+  font-family: "Poppins", sans-serif !important;
+}
+
+.btn-primary {
+  background-color: #5f6f52 !important;
+  border-color: #5f6f52 !important;
+}
+
+.btn-primary:hover {
+  background-color: #7f956e !important;
+}
+
+.active {
+  color: black !important;
+}
+
+.nav-link {
+  color: #000 !important;
+}
+
+.nav-link:hover {
+  color: grey !important;
+}
+
+.home .row {
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.app .circle {
+  display: inline-block;
+  border-radius: 25px;
+  margin: auto;
+  background-color: #a3ccb0;
+}
+
+.app .circle img {
+  position: relative;
+}
+
+.features .circle {
+  display: inline-block;
+  border-radius: 20px;
+  width: 200px;
+  margin: auto;
+  color: #fff;
+  background-color: #5f6f52;
+}
+
+.features .circle i {
+  position: relative;
+  top: 30px;
+}
+
+.tim img {
+  width: 200px;
+  border: 5px solid #5f6f52;
+}
